@@ -10,7 +10,7 @@ def txt2listoftuples(file:str, delimiter=" ") -> list[tuple]:
     textlist = txt2list(file)
     return [tuple(x.split(delimiter)) for x in textlist]
 
-def inputLine(infile):
+def inputLine(infile:str) -> str:
     with open(infile) as f:
         for line in f.readlines():
             yield line.strip("\n")

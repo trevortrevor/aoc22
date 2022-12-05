@@ -9,7 +9,7 @@ else:
  
 elves = []
 
-def parseElf(elfString:str) -> range:
+def parseElf(elfString:str) -> set:
     elfString = elfString.split("-")
     return set(range(int(elfString[0]), int(elfString[-1]) + 1))
 
@@ -20,7 +20,7 @@ for line in inputLine(infile):
     elves.append((elf1, elf2))
 
 
-def elfSubset(elves):
+def elfSubset(elves:list):
     p1total = 0
     for elfPair in elves:
         if elfPair[0].issubset(elfPair[1]) or elfPair[1].issubset(elfPair[0]):
