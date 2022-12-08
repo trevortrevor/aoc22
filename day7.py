@@ -121,8 +121,7 @@ class Device():
                 self.inputCommand(*command[1:])
             else:
                 self.parseOutput(command)
-            
-                    
+                             
         
 elfDevice = Device(indata)
 elfDevice.run()
